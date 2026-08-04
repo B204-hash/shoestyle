@@ -1,0 +1,27 @@
+.footer-link:hover {
+    color: #0dfdd5; /* Bootstrap Primary */
+    transition: color 0.3s ease;
+    text-decoration: underline;
+}
+
+.btn-social {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 16px;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+}
+
+.btn-social:hover {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+    color: #fff;
+}
+
+.footer-menu a:hover {
+    text-decoration: underline;
+    color: #0d6efd;
+}
