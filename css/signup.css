@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+  --brand: #0d6efd;
+  --brand-2: #845ef7;
+  --success-1: #28a745;
+  --success-2: #20c997;
+  --text: #1b1f29;
+  --muted: #6c757d;
+}
+
+* { box-sizing: border-box; }
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  padding: 24px;
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+
+  background:
+    linear-gradient(rgba(11, 18, 32, 0.55), rgba(11, 18, 32, 0.55)),
+    url('.../images/navbar.jpg') center / cover no-repeat fixed;
+
+  display: grid;
+  place-items: center;
+}
+
+/* ---- Card Styling ---- */
+.card {
+  width: 100%;
+  max-width: 420px;
+  padding: 32px !important;
+  border: 0;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.92);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.15),
+    0 2px 8px rgba(0, 0, 0, 0.08);
+
+  animation: floatIn 0.6s ease both;
+}
+
+@keyframes floatIn {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+/* ---- Heading ---- */
+.card h2 {
+  margin-bottom: 18px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, var(--brand), var(--brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+}
+
+/* ---- Form Fields ---- */
+.form-label {
+  font-weight: 600;
+  color: #2b2f3a;
+}
+
+.form-control {
+  height: 48px;
+  border-radius: 12px;
+  border: 1px solid #e2e6ea;
+  background: #fff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.06s ease;
+}
+
+.form-control::placeholder {
+  color: #9aa6b2;
+}
+
+.form-control:focus {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.15);
+  transform: translateY(-1px);
+}
+
+/* ---- Button ---- */
+.btn {
+  height: 48px;
+  border-radius: 12px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, var(--success-1), var(--success-2));
+  border: 0;
+  transition: transform 0.08s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.btn-success:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 18px rgba(32, 201, 151, 0.25);
+}
+
+.btn-success:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---- Alert Box ---- */
+.alert {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(220, 53, 69, 0.18);
+}
+
+/* ---- Links ---- */
+.text-success {
+  color: var(--success-2) !important;
+}
+
+a.text-success:hover {
+  text-decoration: underline;
+}
+
+/* ---- Small Text ---- */
+.card small {
+  color: var(--muted);
+  display: block;
+  margin-top: 16px;
+  text-align: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 576px) {
+  body { padding: 16px; }
+  .card { padding: 28px !important; }
+  .card h2 { font-size: 1.5rem; }
+}
